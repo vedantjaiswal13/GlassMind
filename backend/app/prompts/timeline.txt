@@ -1,0 +1,1 @@
+Provide 3 to 5 clear milestones of what the system did to process the query, written as short active phrases. Example: "Analyzed query intent", "Scanned uploaded documents", "Verified factual alignment", "Generated final answer".

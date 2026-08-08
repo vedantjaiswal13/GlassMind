@@ -1,0 +1,223 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/*
+ * =========================================================
+ * GlassMind — B2B SaaS Explainable AI Workspace
+ * Light Theme Design System (Linear, Apple & Notion Inspired)
+ *
+ * Background: #F7F8FA | Surface: #FFFFFF | Secondary: #F3F5F7
+ * Sidebar: #FCFCFD | Primary Text: #111827 | Secondary Text: #6B7280
+ * Borders: #E5E7EB | Accent: #4F46E5 | Success: #16A34A
+ * Warning: #D97706 | Danger: #DC2626
+ * =========================================================
+ */
+
+:root {
+  --background: 220 14% 97%;     /* #F7F8FA */
+  --surface: 0 0% 100%;          /* #FFFFFF */
+  --secondary-surface: 210 14% 96%; /* #F3F5F7 */
+  --sidebar-bg: 240 14% 99%;     /* #FCFCFD */
+  --foreground: 221 39% 11%;     /* #111827 */
+  --muted-foreground: 215 16% 47%; /* #6B7280 */
+  --border: 214 32% 91%;         /* #E5E7EB */
+  --accent: 243 75% 59%;         /* #4F46E5 */
+  --success: 142 76% 36%;        /* #16A34A */
+  --warning: 38 92% 50%;         /* #D97706 */
+  --danger: 0 72% 51%;           /* #DC2626 */
+
+  --radius-workspace: 20px;
+  --radius-input: 18px;
+  --radius-button: 14px;
+  --radius-drawer: 24px;
+}
+
+.dark {
+  /* Enforce clean light theme workspace across app */
+  --background: 220 14% 97%;
+  --surface: 0 0% 100%;
+  --secondary-surface: 210 14% 96%;
+  --sidebar-bg: 240 14% 99%;
+  --foreground: 221 39% 11%;
+  --muted-foreground: 215 16% 47%;
+  --border: 214 32% 91%;
+  --accent: 243 75% 59%;
+}
+
+@theme inline {
+  --color-bg-base: #F7F8FA;
+  --color-surface: #FFFFFF;
+  --color-secondary-surface: #F3F5F7;
+  --color-sidebar-bg: #FCFCFD;
+  --color-text-primary: #111827;
+  --color-text-secondary: #6B7280;
+  --color-border-subtle: #E5E7EB;
+
+  --color-accent-brand: #4F46E5;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+
+  --color-background: #F7F8FA;
+  --color-foreground: #111827;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #111827;
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #111827;
+  --color-primary: #4F46E5;
+  --color-primary-foreground: #FFFFFF;
+  --color-secondary: #F3F5F7;
+  --color-secondary-foreground: #111827;
+  --color-muted: #F3F5F7;
+  --color-muted-foreground: #6B7280;
+  --color-accent: #EEF2FF;
+  --color-accent-foreground: #4F46E5;
+  --color-border: #E5E7EB;
+  --color-input: #E5E7EB;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer base {
+  * {
+    border-color: #E5E7EB;
+  }
+
+  html, body {
+    background-color: #F7F8FA;
+    color: #111827;
+    font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overscroll-behavior: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Editorial Typography Scale */
+  h1, .text-page-title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+    color: #111827;
+  }
+
+  h2, .text-section-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    color: #111827;
+  }
+
+  .text-conversation {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #111827;
+  }
+
+  .text-body {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #111827;
+  }
+
+  .text-secondary {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #6B7280;
+  }
+
+  .text-label {
+    font-size: 12px;
+    line-height: 1.3;
+    color: #6B7280;
+  }
+
+  /* Subtle B2B scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #E5E7EB;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D1D5DB;
+  }
+}
+
+/* ── GlassMind Prose (ReactMarkdown Answer Styling) ── */
+.prose {
+  --tw-prose-body: #111827;
+  --tw-prose-headings: #111827;
+  --tw-prose-lead: #4B5563;
+  --tw-prose-links: #4F46E5;
+  --tw-prose-bold: #111827;
+  --tw-prose-counters: #6B7280;
+  --tw-prose-bullets: #D1D5DB;
+  --tw-prose-hr: #E5E7EB;
+  --tw-prose-quotes: #111827;
+  --tw-prose-quote-borders: #4F46E5;
+  --tw-prose-captions: #6B7280;
+  --tw-prose-code: #4F46E5;
+  --tw-prose-pre-code: #F7F8FA;
+  --tw-prose-pre-bg: #111827;
+  --tw-prose-th-borders: #D1D5DB;
+  --tw-prose-td-borders: #E5E7EB;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #111827;
+}
+
+.prose h1 { font-size: 1.35rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+.prose h2 { font-size: 1.15rem; font-weight: 700; margin-top: 1.4rem; margin-bottom: 0.6rem; letter-spacing: -0.008em; }
+.prose h3 { font-size: 1rem; font-weight: 600; margin-top: 1.2rem; margin-bottom: 0.4rem; }
+.prose h4 { font-size: 0.9375rem; font-weight: 600; margin-top: 1rem; margin-bottom: 0.35rem; }
+.prose p { margin-bottom: 0.85rem; }
+.prose ul { list-style-type: disc; padding-left: 1.4rem; margin-bottom: 0.85rem; }
+.prose ol { list-style-type: decimal; padding-left: 1.4rem; margin-bottom: 0.85rem; }
+.prose li { margin-bottom: 0.3rem; line-height: 1.6; }
+.prose code {
+  background: #F3F5F7;
+  border: 1px solid #E5E7EB;
+  border-radius: 5px;
+  padding: 0.1em 0.4em;
+  font-size: 0.85em;
+  font-family: var(--font-geist-mono), monospace;
+  color: #4F46E5;
+}
+.prose pre {
+  background: #111827;
+  border-radius: 10px;
+  border: 1px solid #E5E7EB;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+.prose pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #F7F8FA;
+  font-size: 0.875rem;
+}
+.prose blockquote {
+  border-left: 3px solid #4F46E5;
+  padding-left: 1rem;
+  color: #6B7280;
+  font-style: italic;
+  margin-left: 0;
+}
+.prose strong { font-weight: 700; color: #111827; }
+.prose em { font-style: italic; }
+.prose a { color: #4F46E5; text-decoration: underline; text-underline-offset: 2px; }
+.prose a:hover { color: #4338CA; }
+.prose hr { border-color: #E5E7EB; margin-top: 1.25rem; margin-bottom: 1.25rem; }
+.prose table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.prose th { background: #F3F5F7; font-weight: 600; padding: 0.5rem 0.75rem; text-align: left; border: 1px solid #E5E7EB; }
+.prose td { padding: 0.5rem 0.75rem; border: 1px solid #E5E7EB; }

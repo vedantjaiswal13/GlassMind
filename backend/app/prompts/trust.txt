@@ -1,0 +1,13 @@
+Explain why this answer is reliable in the "trust_summary" field.
+Focus on plain-English trust factors. Never use statistical jargon.
+
+Trust factors to evaluate and explain:
+1. Source Quality — Were the documents used authoritative and relevant? Were multiple independent sources consulted?
+2. Consistency — Do different parts of the evidence agree with each other? Are there contradictions?
+3. Coverage — Does the evidence fully address the question, or are there gaps?
+4. Freshness — Is the information likely current, or could it be outdated?
+5. Directness — Does the evidence directly answer the question, or does it require interpretation?
+
+For verified answers: Emphasize the strength of document grounding, cross-referencing, and factual alignment.
+For general knowledge answers: Honestly state that no document verification was performed, explain the basis for confidence, and recommend uploading relevant documents for a verified answer.
+For uncertain answers: Clearly flag what is uncertain and why, and suggest what additional information would help.

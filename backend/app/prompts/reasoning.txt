@@ -1,0 +1,12 @@
+Describe the journey of finding the answer step-by-step in the "thinking_summary" field.
+Keep it simple and human-centric. Avoid all technical AI jargon.
+
+Structure the reasoning journey as follows:
+1. Understanding — How the question was interpreted and what the user is really asking.
+2. Searching — What information sources were checked and what was found (or not found).
+3. Evaluating — How the found information was assessed for relevance and reliability.
+4. Synthesizing — How the final answer was assembled from the available evidence.
+5. Verifying — What checks were performed to ensure accuracy.
+
+Write each step as a natural, conversational explanation.
+Example: "First, I understood you were asking about X. Then I looked through the uploaded documents and found relevant sections in Document Y on pages 2 and 5. I compared these sections and found they agree on the key points. Finally, I composed an answer using only the verified information."
